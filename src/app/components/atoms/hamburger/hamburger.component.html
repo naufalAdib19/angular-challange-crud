@@ -1,0 +1,9 @@
+<div
+  [ngClass]="isActive ? 'active' : ''"
+  class="hamburger-container"
+  (click)="onClickHamburger(); hamburgerState()"
+>
+  <div class="origin-top-left transition duration-300"></div>
+  <div class="transition duration-300"></div>
+  <div class="origin-bottom-left transition duration-300"></div>
+</div>

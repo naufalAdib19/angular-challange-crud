@@ -1,0 +1,23 @@
+<div class="">
+  <div
+    [ngClass]="isHamburgerActive ? 'translate-x-0' : ''"
+    class="sidebar-part transition duration-300 translate-x-full fixed top-0 right-0 w-full"
+  >
+    <sidebar />
+  </div>
+  <div
+    class="navbar-container h-[60px] shadow items-center flex justify-between px-16 relative"
+  >
+    <div class="icons relative -z-10">
+      <icons-logo />
+    </div>
+    <div class="navigation-section">
+      <div class="hidden md:block">
+        <navigation-list />
+      </div>
+      <div class="block md:hidden relative z-20">
+        <hamburger-menu (newItemEvent)="hamburgerState($event)" />
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+.hamburger-container {
+  display: flex;
+  flex-direction: column;
+  column-gap: 5px;
+  row-gap: 5px;
+}
+
+.hamburger-container > div {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+}
+
+.active > div:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.active > div:nth-child(2) {
+  transform: scale(0);
+}
+
+.active > div:nth-child(3) {
+  transform: rotate(-45deg);
+}
