@@ -1,7 +1,7 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit, Injectable } from '@angular/core';
 import { CardComponent } from '../../molecules/card/card.component';
 import { ProductDataService } from '../../../services/product-data.service';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -10,6 +10,7 @@ import { CommonModule } from '@angular/common';
   imports: [CardComponent, HttpClientModule, CommonModule],
   templateUrl: './cardlist.component.html',
   styleUrl: './cardlist.component.css',
+  providers: [ProductDataService],
 })
 export class CardlistComponent implements OnInit {
   productList: CardComponent[] = [];

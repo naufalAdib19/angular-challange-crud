@@ -1,1 +1,15 @@
-<div></div>
+<div class="shadow-md w-[200px] h-[230px] py-5">
+  <div class="image-part">
+    <img
+      [src]="image"
+      [alt]="title"
+      class="max-w-[90px] min-h-[90px] max-h-[90px] mx-auto"
+    />
+  </div>
+  <div class="desc-part px-3 mt-2">
+    <div>
+      <h1 class="font-semibold">{{ truncateTitle() }}</h1>
+      <p>${{ price }}</p>
+    </div>
+  </div>
+</div>

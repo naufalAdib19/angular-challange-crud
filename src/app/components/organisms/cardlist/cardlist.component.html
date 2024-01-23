@@ -1,5 +1,5 @@
-<div>
+<div class="flex flex-wrap gap-5 justify-center">
   <div *ngFor="let card of productList">
-    <p>{{ card.title }}</p>
+    <card [title]="card.title" [price]="card.price" [image]="card.image" />
   </div>
 </div>
